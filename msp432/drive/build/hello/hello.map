@@ -1,0 +1,667 @@
+Archive member included to satisfy reference by file (symbol)
+
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+                              build/hello/odom.o (cosf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+                              build/hello/odom.o (sinf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o) (__kernel_cosf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o) (__kernel_sinf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+                              build/hello/odom.o (lroundf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o) (__ieee754_rem_pio2f)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o) (fabsf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o) (__kernel_rem_pio2f)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o) (floorf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o) (scalbnf)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+                              build/hello/odom.o (__aeabi_fmul)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+                              build/hello/odom.o (__aeabi_fsub)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+                              build/hello/odom.o (__aeabi_fdiv)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o) (__aeabi_fcmpeq)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+                              /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o) (__aeabi_f2iz)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+                              build/hello/system_msp432p401r.o (__aeabi_f2uiz)
+/Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                              build/hello/startup_msp432p401r_gcc.o (__libc_init_array)
+
+Discarded input sections
+
+ .text          0x00000000        0x0 build/hello/hello.o
+ .data          0x00000000        0x0 build/hello/hello.o
+ .bss           0x00000000        0x0 build/hello/hello.o
+ .text          0x00000000        0x0 build/hello/board.o
+ .data          0x00000000        0x0 build/hello/board.o
+ .bss           0x00000000        0x0 build/hello/board.o
+ .text.delay_ms
+                0x00000000       0x26 build/hello/board.o
+ .text.bump_pressed
+                0x00000000       0x18 build/hello/board.o
+ .text.led      0x00000000       0x18 build/hello/board.o
+ .text.countdown
+                0x00000000       0x34 build/hello/board.o
+ .text          0x00000000        0x0 build/hello/motor.o
+ .data          0x00000000        0x0 build/hello/motor.o
+ .bss           0x00000000        0x0 build/hello/motor.o
+ .text.wheel    0x00000000       0x68 build/hello/motor.o
+ .text.motor_set
+                0x00000000       0x18 build/hello/motor.o
+ .text.motor_off
+                0x00000000       0x20 build/hello/motor.o
+ .text.motor_run_until
+                0x00000000       0x62 build/hello/motor.o
+ .text.motor_run_ms
+                0x00000000        0x6 build/hello/motor.o
+ .text          0x00000000        0x0 build/hello/uart.o
+ .data          0x00000000        0x0 build/hello/uart.o
+ .bss           0x00000000        0x0 build/hello/uart.o
+ .text.uart_put_int
+                0x00000000       0x16 build/hello/uart.o
+ .text          0x00000000        0x0 build/hello/encoder.o
+ .data          0x00000000        0x0 build/hello/encoder.o
+ .bss           0x00000000        0x0 build/hello/encoder.o
+ .text.encoder_init
+                0x00000000       0x7c build/hello/encoder.o
+ .text.encoder_left
+                0x00000000        0xc build/hello/encoder.o
+ .text.encoder_right
+                0x00000000        0xc build/hello/encoder.o
+ .text          0x00000000        0x0 build/hello/odom.o
+ .data          0x00000000        0x0 build/hello/odom.o
+ .bss           0x00000000        0x0 build/hello/odom.o
+ .text.odom_reset
+                0x00000000       0x40 build/hello/odom.o
+ .text.odom_update
+                0x00000000      0x114 build/hello/odom.o
+ .text.odom_x_mm
+                0x00000000        0xc build/hello/odom.o
+ .text.odom_y_mm
+                0x00000000        0xc build/hello/odom.o
+ .text.odom_heading_deg
+                0x00000000       0x30 build/hello/odom.o
+ .text.odom_distance_mm
+                0x00000000        0xc build/hello/odom.o
+ .bss.last_right
+                0x00000000        0x4 build/hello/odom.o
+ .bss.last_left
+                0x00000000        0x4 build/hello/odom.o
+ .bss.dist_mm   0x00000000        0x4 build/hello/odom.o
+ .bss.theta     0x00000000        0x4 build/hello/odom.o
+ .bss.y_mm      0x00000000        0x4 build/hello/odom.o
+ .bss.x_mm      0x00000000        0x4 build/hello/odom.o
+ .debug_info    0x00000000      0x3f6 build/hello/odom.o
+ .debug_abbrev  0x00000000      0x123 build/hello/odom.o
+ .debug_loclists
+                0x00000000       0xad build/hello/odom.o
+ .debug_aranges
+                0x00000000       0x48 build/hello/odom.o
+ .debug_rnglists
+                0x00000000       0x32 build/hello/odom.o
+ .debug_line    0x00000000      0x425 build/hello/odom.o
+ .debug_str     0x00000000      0x299 build/hello/odom.o
+ .comment       0x00000000       0x47 build/hello/odom.o
+ .debug_frame   0x00000000       0x94 build/hello/odom.o
+ .ARM.attributes
+                0x00000000       0x2e build/hello/odom.o
+ .text          0x00000000        0x0 build/hello/stubs.o
+ .data          0x00000000        0x0 build/hello/stubs.o
+ .bss           0x00000000        0x0 build/hello/stubs.o
+ .text          0x00000000        0x0 build/hello/system_msp432p401r.o
+ .data          0x00000000        0x0 build/hello/system_msp432p401r.o
+ .bss           0x00000000        0x0 build/hello/system_msp432p401r.o
+ .text.SystemCoreClockUpdate
+                0x00000000      0x18c build/hello/system_msp432p401r.o
+ .data.SystemCoreClock
+                0x00000000        0x4 build/hello/system_msp432p401r.o
+ .text          0x00000000       0x14 build/hello/startup_msp432p401r_gcc.o
+ .data          0x00000000        0x0 build/hello/startup_msp432p401r_gcc.o
+ .bss           0x00000000        0x0 build/hello/startup_msp432p401r_gcc.o
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .text.cosf     0x00000000       0x64 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .debug_frame   0x00000000       0x38 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_cos.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .text.sinf     0x00000000       0x68 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .debug_frame   0x00000000       0x38 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_sin.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .text.__kernel_cosf
+                0x00000000      0x194 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .debug_frame   0x00000000       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_cos.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .text.__kernel_sinf
+                0x00000000       0xf4 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .debug_frame   0x00000000       0x44 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_sin.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .text.lroundf  0x00000000       0x68 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .debug_frame   0x00000000       0x28 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_lround.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .text.__ieee754_rem_pio2f
+                0x00000000      0x320 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .rodata.npio2_hw
+                0x00000000       0x80 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .rodata.two_over_pi
+                0x00000000      0x318 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .debug_frame   0x00000000       0x58 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-ef_rem_pio2.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .text.fabsf    0x00000000        0x8 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .debug_frame   0x00000000       0x20 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_fabs.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .text.__kernel_rem_pio2f
+                0x00000000      0x730 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .rodata.PIo2   0x00000000       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .rodata.init_jk
+                0x00000000        0xc /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .debug_frame   0x00000000       0x50 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-kf_rem_pio2.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .text.floorf   0x00000000       0xa4 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .debug_frame   0x00000000       0x40 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_floor.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .text.scalbnf  0x00000000       0xb4 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .debug_frame   0x00000000       0x34 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .ARM.attributes
+                0x00000000       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a(libm_a-sf_scalbn.o)
+ .text          0x00000000      0x168 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .debug_frame   0x00000000       0x24 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_mulsf3.o)
+ .text          0x00000000      0x21c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x00000000       0x4c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_addsubsf3.o)
+ .text          0x00000000      0x2a0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x00000000       0x38 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_muldivsf3.o)
+ .text          0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .debug_frame   0x00000000       0xc8 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_cmpsf2.o)
+ .text          0x00000000       0x4c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .debug_frame   0x00000000       0x24 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixsfsi.o)
+ .text          0x00000000       0x40 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_line_str
+                0x00000000       0xec /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .debug_frame   0x00000000       0x24 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .ARM.attributes
+                0x00000000       0x1e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a(_arm_fixunssfsi.o)
+ .text          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+ .data          0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+ .bss           0x00000000        0x0 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+MAIN_FLASH       0x00000000         0x00040000         xr
+INFO_FLASH       0x00200000         0x00004000         xr
+SRAM_CODE        0x01000000         0x00010000         xrw
+SRAM_DATA        0x20000000         0x00010000         rw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD build/hello/hello.o
+LOAD build/hello/board.o
+LOAD build/hello/motor.o
+LOAD build/hello/uart.o
+LOAD build/hello/encoder.o
+LOAD build/hello/odom.o
+LOAD build/hello/stubs.o
+LOAD build/hello/system_msp432p401r.o
+LOAD build/hello/startup_msp432p401r_gcc.o
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
+START GROUP
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a
+END GROUP
+START GROUP
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+START GROUP
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libnosys.a
+END GROUP
+                0x20010000                        _estack = 0x20010000
+                0x00000000                        _Min_Heap_Size = 0x0
+                0x00000080                        _Min_Stack_Size = 0x80
+
+.isr_vector     0x00000000       0xe4
+                0x00000000                        . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x00000000       0xe4 build/hello/startup_msp432p401r_gcc.o
+                0x00000000                g_pfnVectors
+                0x000000e4                        . = ALIGN (0x4)
+
+.text           0x000000e4      0x3d8
+                0x000000e4                        . = ALIGN (0x4)
+ *(.text)
+ *(.text*)
+ .text.poll_rx  0x000000e4       0x28 build/hello/hello.o
+ .text.startup.main
+                0x0000010c       0x68 build/hello/hello.o
+                0x0000010c                main
+ .text.board_init
+                0x00000174       0x5c build/hello/board.o
+                0x00000174                board_init
+ .text.delay_ms_poll
+                0x000001d0       0x2e build/hello/board.o
+                0x000001d0                delay_ms_poll
+ *fill*         0x000001fe        0x2 
+ .text.led_toggle
+                0x00000200       0x10 build/hello/board.o
+                0x00000200                led_toggle
+ .text.motor_init
+                0x00000210       0x6c build/hello/motor.o
+                0x00000210                motor_init
+ .text.uart_init
+                0x0000027c       0x38 build/hello/uart.o
+                0x0000027c                uart_init
+ .text.uart_putc
+                0x000002b4       0x10 build/hello/uart.o
+                0x000002b4                uart_putc
+ .text.uart_puts
+                0x000002c4       0x12 build/hello/uart.o
+                0x000002c4                uart_puts
+ .text.uart_put_uint
+                0x000002d6       0x32 build/hello/uart.o
+                0x000002d6                uart_put_uint
+ .text.uart_getc
+                0x00000308       0x18 build/hello/uart.o
+                0x00000308                uart_getc
+ .text.arm_next_edge
+                0x00000320       0x28 build/hello/encoder.o
+ .text.PORT5_IRQHandler
+                0x00000348       0x74 build/hello/encoder.o
+                0x00000348                PORT5_IRQHandler
+ .text._init    0x000003bc        0x2 build/hello/stubs.o
+                0x000003bc                _init
+ .text._fini    0x000003be        0x2 build/hello/stubs.o
+                0x000003be                _fini
+ .text.SystemInit
+                0x000003c0       0x54 build/hello/system_msp432p401r.o
+                0x000003c0                SystemInit
+ .text.Reset_Handler
+                0x00000414       0x50 build/hello/startup_msp432p401r_gcc.o
+                0x00000414                Reset_Handler
+ .text.Default_Handler
+                0x00000464        0x2 build/hello/startup_msp432p401r_gcc.o
+                0x00000464                T32_INT2_IRQHandler
+                0x00000464                DebugMon_Handler
+                0x00000464                AES256_IRQHandler
+                0x00000464                HardFault_Handler
+                0x00000464                SysTick_Handler
+                0x00000464                PendSV_Handler
+                0x00000464                NMI_Handler
+                0x00000464                RTC_C_IRQHandler
+                0x00000464                PORT1_IRQHandler
+                0x00000464                FPU_IRQHandler
+                0x00000464                PORT2_IRQHandler
+                0x00000464                TA3_0_IRQHandler
+                0x00000464                UsageFault_Handler
+                0x00000464                DMA_INT3_IRQHandler
+                0x00000464                TA2_0_IRQHandler
+                0x00000464                DMA_INT1_IRQHandler
+                0x00000464                WDT_A_IRQHandler
+                0x00000464                TA2_N_IRQHandler
+                0x00000464                TA1_0_IRQHandler
+                0x00000464                PSS_IRQHandler
+                0x00000464                DMA_INT2_IRQHandler
+                0x00000464                EUSCIA3_IRQHandler
+                0x00000464                DMA_INT0_IRQHandler
+                0x00000464                PORT4_IRQHandler
+                0x00000464                EUSCIB0_IRQHandler
+                0x00000464                Default_Handler
+                0x00000464                T32_INTC_IRQHandler
+                0x00000464                TA3_N_IRQHandler
+                0x00000464                TA0_0_IRQHandler
+                0x00000464                EUSCIA2_IRQHandler
+                0x00000464                PORT6_IRQHandler
+                0x00000464                PORT3_IRQHandler
+                0x00000464                MemManage_Handler
+                0x00000464                SVC_Handler
+                0x00000464                TA1_N_IRQHandler
+                0x00000464                EUSCIA1_IRQHandler
+                0x00000464                COMP_E1_IRQHandler
+                0x00000464                EUSCIB2_IRQHandler
+                0x00000464                FLCTL_IRQHandler
+                0x00000464                EUSCIB3_IRQHandler
+                0x00000464                T32_INT1_IRQHandler
+                0x00000464                DMA_ERR_IRQHandler
+                0x00000464                ADC14_IRQHandler
+                0x00000464                EUSCIA0_IRQHandler
+                0x00000464                BusFault_Handler
+                0x00000464                PCM_IRQHandler
+                0x00000464                TA0_N_IRQHandler
+                0x00000464                COMP_E0_IRQHandler
+                0x00000464                EUSCIB1_IRQHandler
+                0x00000464                CS_IRQHandler
+ *fill*         0x00000466        0x2 
+ .text.__libc_init_array
+                0x00000468       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                0x00000468                __libc_init_array
+ *(.rodata)
+ *(.rodata*)
+ .rodata.main.str1.1
+                0x000004b0        0xb build/hello/hello.o
+ *(.glue_7)
+ .glue_7        0x000004bb        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x000004bb        0x0 linker stubs
+ *(.eh_frame)
+ *(.init)
+ *(.fini)
+                0x000004bc                        . = ALIGN (0x4)
+ *fill*         0x000004bb        0x1 
+                0x000004bc                        _etext = .
+
+.vfp11_veneer   0x000004bc        0x0
+ .vfp11_veneer  0x000004bc        0x0 linker stubs
+
+.v4_bx          0x000004bc        0x0
+ .v4_bx         0x000004bc        0x0 linker stubs
+
+.iplt           0x000004bc        0x0
+ .iplt          0x000004bc        0x0 build/hello/hello.o
+
+.rel.dyn        0x000004bc        0x0
+ .rel.iplt      0x000004bc        0x0 build/hello/hello.o
+
+.ARM.extab
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+
+.ARM            0x000004bc        0x0
+                0x000004bc                        __exidx_start = .
+ *(.ARM.exidx*)
+                0x000004bc                        __exidx_end = .
+
+.preinit_array  0x000004bc        0x0
+                0x000004bc                        PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x000004bc                        PROVIDE (__preinit_array_end = .)
+
+.init_array     0x000004bc        0x0
+                0x000004bc                        PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+                0x000004bc                        PROVIDE (__init_array_end = .)
+
+.fini_array     0x000004bc        0x0
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x000004bc                        _sidata = LOADADDR (.data)
+
+.data           0x20000000        0x0 load address 0x000004bc
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _sdata = .
+ *(.data)
+ *(.data*)
+                0x20000000                        . = ALIGN (0x4)
+                0x20000000                        _edata = .
+
+.igot.plt       0x20000000        0x0 load address 0x000004bc
+ .igot.plt      0x20000000        0x0 build/hello/hello.o
+                0x20000000                        . = ALIGN (0x4)
+
+.bss            0x20000000        0xc
+                0x20000000                        _sbss = .
+                0x20000000                        __bss_start__ = _sbss
+ *(.bss)
+ *(.bss*)
+ .bss.lines_received
+                0x20000000        0x4 build/hello/hello.o
+ .bss.right_count
+                0x20000004        0x4 build/hello/encoder.o
+ .bss.left_count
+                0x20000008        0x4 build/hello/encoder.o
+ *(COMMON)
+                0x2000000c                        . = ALIGN (0x4)
+                0x2000000c                        _ebss = .
+                0x2000000c                        __bss_end__ = _ebss
+
+._user_heap_stack
+                0x2000000c       0x80
+                0x2000000c                        . = ALIGN (0x4)
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x2000000c                        . = (. + _Min_Heap_Size)
+                0x2000008c                        . = (. + _Min_Stack_Size)
+ *fill*         0x2000000c       0x80 
+                0x2000008c                        . = ALIGN (0x4)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x00000000       0x2c
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x00000000       0x2e build/hello/hello.o
+ .ARM.attributes
+                0x0000002e       0x2e build/hello/board.o
+ .ARM.attributes
+                0x0000005c       0x2e build/hello/motor.o
+ .ARM.attributes
+                0x0000008a       0x2e build/hello/uart.o
+ .ARM.attributes
+                0x000000b8       0x2e build/hello/encoder.o
+ .ARM.attributes
+                0x000000e6       0x2e build/hello/stubs.o
+ .ARM.attributes
+                0x00000114       0x2e build/hello/system_msp432p401r.o
+ .ARM.attributes
+                0x00000142       0x21 build/hello/startup_msp432p401r_gcc.o
+ .ARM.attributes
+                0x00000163       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+OUTPUT(build/hello/hello.elf elf32-littlearm)
+LOAD linker stubs
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
+LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
+
+.debug_info     0x00000000     0x2af5
+ .debug_info    0x00000000      0x3e7 build/hello/hello.o
+ .debug_info    0x000003e7      0x721 build/hello/board.o
+ .debug_info    0x00000b08      0x7b0 build/hello/motor.o
+ .debug_info    0x000012b8      0x437 build/hello/uart.o
+ .debug_info    0x000016ef      0x827 build/hello/encoder.o
+ .debug_info    0x00001f16       0x4c build/hello/stubs.o
+ .debug_info    0x00001f62      0xb63 build/hello/system_msp432p401r.o
+ .debug_info    0x00002ac5       0x30 build/hello/startup_msp432p401r_gcc.o
+
+.debug_abbrev   0x00000000      0xbcd
+ .debug_abbrev  0x00000000      0x1c5 build/hello/hello.o
+ .debug_abbrev  0x000001c5      0x1f6 build/hello/board.o
+ .debug_abbrev  0x000003bb      0x263 build/hello/motor.o
+ .debug_abbrev  0x0000061e      0x190 build/hello/uart.o
+ .debug_abbrev  0x000007ae      0x262 build/hello/encoder.o
+ .debug_abbrev  0x00000a10       0x4d build/hello/stubs.o
+ .debug_abbrev  0x00000a5d      0x14c build/hello/system_msp432p401r.o
+ .debug_abbrev  0x00000ba9       0x24 build/hello/startup_msp432p401r_gcc.o
+
+.debug_loclists
+                0x00000000      0x5b4
+ .debug_loclists
+                0x00000000       0x2c build/hello/hello.o
+ .debug_loclists
+                0x0000002c       0xa6 build/hello/board.o
+ .debug_loclists
+                0x000000d2      0x20e build/hello/motor.o
+ .debug_loclists
+                0x000002e0       0x86 build/hello/uart.o
+ .debug_loclists
+                0x00000366       0xd7 build/hello/encoder.o
+ .debug_loclists
+                0x0000043d      0x177 build/hello/system_msp432p401r.o
+
+.debug_aranges  0x00000000      0x1c0
+ .debug_aranges
+                0x00000000       0x28 build/hello/hello.o
+ .debug_aranges
+                0x00000028       0x50 build/hello/board.o
+ .debug_aranges
+                0x00000078       0x48 build/hello/motor.o
+ .debug_aranges
+                0x000000c0       0x48 build/hello/uart.o
+ .debug_aranges
+                0x00000108       0x40 build/hello/encoder.o
+ .debug_aranges
+                0x00000148       0x28 build/hello/stubs.o
+ .debug_aranges
+                0x00000170       0x28 build/hello/system_msp432p401r.o
+ .debug_aranges
+                0x00000198       0x28 build/hello/startup_msp432p401r_gcc.o
+
+.debug_rnglists
+                0x00000000      0x183
+ .debug_rnglists
+                0x00000000       0x25 build/hello/hello.o
+ .debug_rnglists
+                0x00000025       0x61 build/hello/board.o
+ .debug_rnglists
+                0x00000086       0x3d build/hello/motor.o
+ .debug_rnglists
+                0x000000c3       0x31 build/hello/uart.o
+ .debug_rnglists
+                0x000000f4       0x43 build/hello/encoder.o
+ .debug_rnglists
+                0x00000137       0x19 build/hello/stubs.o
+ .debug_rnglists
+                0x00000150       0x1a build/hello/system_msp432p401r.o
+ .debug_rnglists
+                0x0000016a       0x19 build/hello/startup_msp432p401r_gcc.o
+
+.debug_line     0x00000000     0x14ab
+ .debug_line    0x00000000      0x239 build/hello/hello.o
+ .debug_line    0x00000239      0x391 build/hello/board.o
+ .debug_line    0x000005ca      0x404 build/hello/motor.o
+ .debug_line    0x000009ce      0x2e3 build/hello/uart.o
+ .debug_line    0x00000cb1      0x386 build/hello/encoder.o
+ .debug_line    0x00001037       0x49 build/hello/stubs.o
+ .debug_line    0x00001080      0x3b3 build/hello/system_msp432p401r.o
+ .debug_line    0x00001433       0x78 build/hello/startup_msp432p401r_gcc.o
+
+.debug_str      0x00000000      0xfb8
+ .debug_str     0x00000000      0xfb8 build/hello/hello.o
+                                0x299 (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/board.o
+                                0x300 (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/motor.o
+                                0x317 (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/uart.o
+                                0x2ae (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/encoder.o
+                                0x57f (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/stubs.o
+                                 0xc2 (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/system_msp432p401r.o
+                                0xa62 (size before relaxing)
+ .debug_str     0x00000fb8        0x0 build/hello/startup_msp432p401r_gcc.o
+                                 0x72 (size before relaxing)
+
+.comment        0x00000000       0x46
+ .comment       0x00000000       0x46 build/hello/hello.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/board.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/motor.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/uart.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/encoder.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/stubs.o
+                                 0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/system_msp432p401r.o
+                                 0x47 (size before relaxing)
+
+.debug_frame    0x00000000      0x31c
+ .debug_frame   0x00000000       0x44 build/hello/hello.o
+ .debug_frame   0x00000044       0x98 build/hello/board.o
+ .debug_frame   0x000000dc       0x98 build/hello/motor.o
+ .debug_frame   0x00000174       0x94 build/hello/uart.o
+ .debug_frame   0x00000208       0x78 build/hello/encoder.o
+ .debug_frame   0x00000280       0x30 build/hello/stubs.o
+ .debug_frame   0x000002b0       0x40 build/hello/system_msp432p401r.o
+ .debug_frame   0x000002f0       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+
+.debug_line_str
+                0x00000000       0x56
+ .debug_line_str
+                0x00000000       0x56 build/hello/startup_msp432p401r_gcc.o

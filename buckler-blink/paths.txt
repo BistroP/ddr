@@ -1,0 +1,9 @@
+# Use in each new terminal before running make or JLinkExe:
+#   source ~/eecs149-ddr/buckler-blink/paths.txt
+# ("source" is required. Running the file any other way will not change your terminal.)
+
+# Arm compiler (gcc, objcopy, ...)
+export PATH="$HOME/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin:$PATH"
+
+# SEGGER J-Link (JLinkExe)
+export PATH="/Applications/SEGGER/JLink:$PATH"
