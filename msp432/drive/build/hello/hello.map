@@ -67,6 +67,25 @@ Discarded input sections
  .bss           0x00000000        0x0 build/hello/uart.o
  .text.uart_put_int
                 0x00000000       0x16 build/hello/uart.o
+ .text          0x00000000        0x0 build/hello/esp.o
+ .data          0x00000000        0x0 build/hello/esp.o
+ .bss           0x00000000        0x0 build/hello/esp.o
+ .text.esp_init
+                0x00000000       0x4c build/hello/esp.o
+ .text.esp_putc
+                0x00000000       0x10 build/hello/esp.o
+ .text.esp_put_uint
+                0x00000000       0x32 build/hello/esp.o
+ .text.esp_puts
+                0x00000000       0x12 build/hello/esp.o
+ .text.esp_put_int
+                0x00000000       0x16 build/hello/esp.o
+ .text.esp_poll_line
+                0x00000000       0xc0 build/hello/esp.o
+ .bss.buf.0     0x00000000       0x40 build/hello/esp.o
+ .bss.overflow.1
+                0x00000000        0x4 build/hello/esp.o
+ .bss.len.2     0x00000000        0x4 build/hello/esp.o
  .text          0x00000000        0x0 build/hello/encoder.o
  .data          0x00000000        0x0 build/hello/encoder.o
  .bss           0x00000000        0x0 build/hello/encoder.o
@@ -274,6 +293,7 @@ LOAD build/hello/hello.o
 LOAD build/hello/board.o
 LOAD build/hello/motor.o
 LOAD build/hello/uart.o
+LOAD build/hello/esp.o
 LOAD build/hello/encoder.o
 LOAD build/hello/odom.o
 LOAD build/hello/stubs.o
@@ -305,7 +325,7 @@ END GROUP
                 0x00000000                g_pfnVectors
                 0x000000e4                        . = ALIGN (0x4)
 
-.text           0x000000e4      0x3d8
+.text           0x000000e4      0x410
                 0x000000e4                        . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -341,131 +361,133 @@ END GROUP
  .text.uart_getc
                 0x00000308       0x18 build/hello/uart.o
                 0x00000308                uart_getc
+ .text.EUSCIA1_IRQHandler
+                0x00000320       0x38 build/hello/esp.o
+                0x00000320                EUSCIA1_IRQHandler
  .text.arm_next_edge
-                0x00000320       0x28 build/hello/encoder.o
+                0x00000358       0x28 build/hello/encoder.o
  .text.PORT5_IRQHandler
-                0x00000348       0x74 build/hello/encoder.o
-                0x00000348                PORT5_IRQHandler
- .text._init    0x000003bc        0x2 build/hello/stubs.o
-                0x000003bc                _init
- .text._fini    0x000003be        0x2 build/hello/stubs.o
-                0x000003be                _fini
+                0x00000380       0x74 build/hello/encoder.o
+                0x00000380                PORT5_IRQHandler
+ .text._init    0x000003f4        0x2 build/hello/stubs.o
+                0x000003f4                _init
+ .text._fini    0x000003f6        0x2 build/hello/stubs.o
+                0x000003f6                _fini
  .text.SystemInit
-                0x000003c0       0x54 build/hello/system_msp432p401r.o
-                0x000003c0                SystemInit
+                0x000003f8       0x54 build/hello/system_msp432p401r.o
+                0x000003f8                SystemInit
  .text.Reset_Handler
-                0x00000414       0x50 build/hello/startup_msp432p401r_gcc.o
-                0x00000414                Reset_Handler
+                0x0000044c       0x50 build/hello/startup_msp432p401r_gcc.o
+                0x0000044c                Reset_Handler
  .text.Default_Handler
-                0x00000464        0x2 build/hello/startup_msp432p401r_gcc.o
-                0x00000464                T32_INT2_IRQHandler
-                0x00000464                DebugMon_Handler
-                0x00000464                AES256_IRQHandler
-                0x00000464                HardFault_Handler
-                0x00000464                SysTick_Handler
-                0x00000464                PendSV_Handler
-                0x00000464                NMI_Handler
-                0x00000464                RTC_C_IRQHandler
-                0x00000464                PORT1_IRQHandler
-                0x00000464                FPU_IRQHandler
-                0x00000464                PORT2_IRQHandler
-                0x00000464                TA3_0_IRQHandler
-                0x00000464                UsageFault_Handler
-                0x00000464                DMA_INT3_IRQHandler
-                0x00000464                TA2_0_IRQHandler
-                0x00000464                DMA_INT1_IRQHandler
-                0x00000464                WDT_A_IRQHandler
-                0x00000464                TA2_N_IRQHandler
-                0x00000464                TA1_0_IRQHandler
-                0x00000464                PSS_IRQHandler
-                0x00000464                DMA_INT2_IRQHandler
-                0x00000464                EUSCIA3_IRQHandler
-                0x00000464                DMA_INT0_IRQHandler
-                0x00000464                PORT4_IRQHandler
-                0x00000464                EUSCIB0_IRQHandler
-                0x00000464                Default_Handler
-                0x00000464                T32_INTC_IRQHandler
-                0x00000464                TA3_N_IRQHandler
-                0x00000464                TA0_0_IRQHandler
-                0x00000464                EUSCIA2_IRQHandler
-                0x00000464                PORT6_IRQHandler
-                0x00000464                PORT3_IRQHandler
-                0x00000464                MemManage_Handler
-                0x00000464                SVC_Handler
-                0x00000464                TA1_N_IRQHandler
-                0x00000464                EUSCIA1_IRQHandler
-                0x00000464                COMP_E1_IRQHandler
-                0x00000464                EUSCIB2_IRQHandler
-                0x00000464                FLCTL_IRQHandler
-                0x00000464                EUSCIB3_IRQHandler
-                0x00000464                T32_INT1_IRQHandler
-                0x00000464                DMA_ERR_IRQHandler
-                0x00000464                ADC14_IRQHandler
-                0x00000464                EUSCIA0_IRQHandler
-                0x00000464                BusFault_Handler
-                0x00000464                PCM_IRQHandler
-                0x00000464                TA0_N_IRQHandler
-                0x00000464                COMP_E0_IRQHandler
-                0x00000464                EUSCIB1_IRQHandler
-                0x00000464                CS_IRQHandler
- *fill*         0x00000466        0x2 
+                0x0000049c        0x2 build/hello/startup_msp432p401r_gcc.o
+                0x0000049c                T32_INT2_IRQHandler
+                0x0000049c                DebugMon_Handler
+                0x0000049c                AES256_IRQHandler
+                0x0000049c                HardFault_Handler
+                0x0000049c                SysTick_Handler
+                0x0000049c                PendSV_Handler
+                0x0000049c                NMI_Handler
+                0x0000049c                RTC_C_IRQHandler
+                0x0000049c                PORT1_IRQHandler
+                0x0000049c                FPU_IRQHandler
+                0x0000049c                PORT2_IRQHandler
+                0x0000049c                TA3_0_IRQHandler
+                0x0000049c                UsageFault_Handler
+                0x0000049c                DMA_INT3_IRQHandler
+                0x0000049c                TA2_0_IRQHandler
+                0x0000049c                DMA_INT1_IRQHandler
+                0x0000049c                WDT_A_IRQHandler
+                0x0000049c                TA2_N_IRQHandler
+                0x0000049c                TA1_0_IRQHandler
+                0x0000049c                PSS_IRQHandler
+                0x0000049c                DMA_INT2_IRQHandler
+                0x0000049c                EUSCIA3_IRQHandler
+                0x0000049c                DMA_INT0_IRQHandler
+                0x0000049c                PORT4_IRQHandler
+                0x0000049c                EUSCIB0_IRQHandler
+                0x0000049c                Default_Handler
+                0x0000049c                T32_INTC_IRQHandler
+                0x0000049c                TA3_N_IRQHandler
+                0x0000049c                TA0_0_IRQHandler
+                0x0000049c                EUSCIA2_IRQHandler
+                0x0000049c                PORT6_IRQHandler
+                0x0000049c                PORT3_IRQHandler
+                0x0000049c                MemManage_Handler
+                0x0000049c                SVC_Handler
+                0x0000049c                TA1_N_IRQHandler
+                0x0000049c                COMP_E1_IRQHandler
+                0x0000049c                EUSCIB2_IRQHandler
+                0x0000049c                FLCTL_IRQHandler
+                0x0000049c                EUSCIB3_IRQHandler
+                0x0000049c                T32_INT1_IRQHandler
+                0x0000049c                DMA_ERR_IRQHandler
+                0x0000049c                ADC14_IRQHandler
+                0x0000049c                EUSCIA0_IRQHandler
+                0x0000049c                BusFault_Handler
+                0x0000049c                PCM_IRQHandler
+                0x0000049c                TA0_N_IRQHandler
+                0x0000049c                COMP_E0_IRQHandler
+                0x0000049c                EUSCIB1_IRQHandler
+                0x0000049c                CS_IRQHandler
+ *fill*         0x0000049e        0x2 
  .text.__libc_init_array
-                0x00000468       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
-                0x00000468                __libc_init_array
+                0x000004a0       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                0x000004a0                __libc_init_array
  *(.rodata)
  *(.rodata*)
  .rodata.main.str1.1
-                0x000004b0        0xb build/hello/hello.o
+                0x000004e8        0xb build/hello/hello.o
  *(.glue_7)
- .glue_7        0x000004bb        0x0 linker stubs
+ .glue_7        0x000004f3        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000004bb        0x0 linker stubs
+ .glue_7t       0x000004f3        0x0 linker stubs
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x000004bc                        . = ALIGN (0x4)
- *fill*         0x000004bb        0x1 
-                0x000004bc                        _etext = .
+                0x000004f4                        . = ALIGN (0x4)
+ *fill*         0x000004f3        0x1 
+                0x000004f4                        _etext = .
 
-.vfp11_veneer   0x000004bc        0x0
- .vfp11_veneer  0x000004bc        0x0 linker stubs
+.vfp11_veneer   0x000004f4        0x0
+ .vfp11_veneer  0x000004f4        0x0 linker stubs
 
-.v4_bx          0x000004bc        0x0
- .v4_bx         0x000004bc        0x0 linker stubs
+.v4_bx          0x000004f4        0x0
+ .v4_bx         0x000004f4        0x0 linker stubs
 
-.iplt           0x000004bc        0x0
- .iplt          0x000004bc        0x0 build/hello/hello.o
+.iplt           0x000004f4        0x0
+ .iplt          0x000004f4        0x0 build/hello/hello.o
 
-.rel.dyn        0x000004bc        0x0
- .rel.iplt      0x000004bc        0x0 build/hello/hello.o
+.rel.dyn        0x000004f4        0x0
+ .rel.iplt      0x000004f4        0x0 build/hello/hello.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000004bc        0x0
-                0x000004bc                        __exidx_start = .
+.ARM            0x000004f4        0x0
+                0x000004f4                        __exidx_start = .
  *(.ARM.exidx*)
-                0x000004bc                        __exidx_end = .
+                0x000004f4                        __exidx_end = .
 
-.preinit_array  0x000004bc        0x0
-                0x000004bc                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x000004f4        0x0
+                0x000004f4                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000004bc                        PROVIDE (__preinit_array_end = .)
+                0x000004f4                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000004bc        0x0
-                0x000004bc                        PROVIDE (__init_array_start = .)
+.init_array     0x000004f4        0x0
+                0x000004f4                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
-                0x000004bc                        PROVIDE (__init_array_end = .)
+                0x000004f4                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x000004bc        0x0
+.fini_array     0x000004f4        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x000004bc                        _sidata = LOADADDR (.data)
+                0x000004f4                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x0 load address 0x000004bc
+.data           0x20000000        0x0 load address 0x000004f4
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -473,35 +495,38 @@ END GROUP
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _edata = .
 
-.igot.plt       0x20000000        0x0 load address 0x000004bc
+.igot.plt       0x20000000        0x0 load address 0x000004f4
  .igot.plt      0x20000000        0x0 build/hello/hello.o
                 0x20000000                        . = ALIGN (0x4)
 
-.bss            0x20000000        0xc
+.bss            0x20000000       0x94
                 0x20000000                        _sbss = .
                 0x20000000                        __bss_start__ = _sbss
  *(.bss)
  *(.bss*)
  .bss.lines_received
                 0x20000000        0x4 build/hello/hello.o
+ .bss.rx_tail   0x20000004        0x4 build/hello/esp.o
+ .bss.rx_head   0x20000008        0x4 build/hello/esp.o
+ .bss.rx_buf    0x2000000c       0x80 build/hello/esp.o
  .bss.right_count
-                0x20000004        0x4 build/hello/encoder.o
+                0x2000008c        0x4 build/hello/encoder.o
  .bss.left_count
-                0x20000008        0x4 build/hello/encoder.o
+                0x20000090        0x4 build/hello/encoder.o
  *(COMMON)
-                0x2000000c                        . = ALIGN (0x4)
-                0x2000000c                        _ebss = .
-                0x2000000c                        __bss_end__ = _ebss
+                0x20000094                        . = ALIGN (0x4)
+                0x20000094                        _ebss = .
+                0x20000094                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x2000000c       0x80
-                0x2000000c                        . = ALIGN (0x4)
+                0x20000094       0x80
+                0x20000094                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x2000000c                        . = (. + _Min_Heap_Size)
-                0x2000008c                        . = (. + _Min_Stack_Size)
- *fill*         0x2000000c       0x80 
-                0x2000008c                        . = ALIGN (0x4)
+                0x20000094                        . = (. + _Min_Heap_Size)
+                0x20000114                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000094       0x80 
+                0x20000114                        . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -520,43 +545,47 @@ END GROUP
  .ARM.attributes
                 0x0000008a       0x2e build/hello/uart.o
  .ARM.attributes
-                0x000000b8       0x2e build/hello/encoder.o
+                0x000000b8       0x2e build/hello/esp.o
  .ARM.attributes
-                0x000000e6       0x2e build/hello/stubs.o
+                0x000000e6       0x2e build/hello/encoder.o
  .ARM.attributes
-                0x00000114       0x2e build/hello/system_msp432p401r.o
+                0x00000114       0x2e build/hello/stubs.o
  .ARM.attributes
-                0x00000142       0x21 build/hello/startup_msp432p401r_gcc.o
+                0x00000142       0x2e build/hello/system_msp432p401r.o
  .ARM.attributes
-                0x00000163       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                0x00000170       0x21 build/hello/startup_msp432p401r_gcc.o
+ .ARM.attributes
+                0x00000191       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
 OUTPUT(build/hello/hello.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0x2af5
+.debug_info     0x00000000     0x335f
  .debug_info    0x00000000      0x3e7 build/hello/hello.o
  .debug_info    0x000003e7      0x721 build/hello/board.o
  .debug_info    0x00000b08      0x7b0 build/hello/motor.o
  .debug_info    0x000012b8      0x437 build/hello/uart.o
- .debug_info    0x000016ef      0x827 build/hello/encoder.o
- .debug_info    0x00001f16       0x4c build/hello/stubs.o
- .debug_info    0x00001f62      0xb63 build/hello/system_msp432p401r.o
- .debug_info    0x00002ac5       0x30 build/hello/startup_msp432p401r_gcc.o
+ .debug_info    0x000016ef      0x86a build/hello/esp.o
+ .debug_info    0x00001f59      0x827 build/hello/encoder.o
+ .debug_info    0x00002780       0x4c build/hello/stubs.o
+ .debug_info    0x000027cc      0xb63 build/hello/system_msp432p401r.o
+ .debug_info    0x0000332f       0x30 build/hello/startup_msp432p401r_gcc.o
 
-.debug_abbrev   0x00000000      0xbcd
+.debug_abbrev   0x00000000      0xe3c
  .debug_abbrev  0x00000000      0x1c5 build/hello/hello.o
  .debug_abbrev  0x000001c5      0x1f6 build/hello/board.o
  .debug_abbrev  0x000003bb      0x263 build/hello/motor.o
  .debug_abbrev  0x0000061e      0x190 build/hello/uart.o
- .debug_abbrev  0x000007ae      0x262 build/hello/encoder.o
- .debug_abbrev  0x00000a10       0x4d build/hello/stubs.o
- .debug_abbrev  0x00000a5d      0x14c build/hello/system_msp432p401r.o
- .debug_abbrev  0x00000ba9       0x24 build/hello/startup_msp432p401r_gcc.o
+ .debug_abbrev  0x000007ae      0x26f build/hello/esp.o
+ .debug_abbrev  0x00000a1d      0x262 build/hello/encoder.o
+ .debug_abbrev  0x00000c7f       0x4d build/hello/stubs.o
+ .debug_abbrev  0x00000ccc      0x14c build/hello/system_msp432p401r.o
+ .debug_abbrev  0x00000e18       0x24 build/hello/startup_msp432p401r_gcc.o
 
 .debug_loclists
-                0x00000000      0x5b4
+                0x00000000      0x707
  .debug_loclists
                 0x00000000       0x2c build/hello/hello.o
  .debug_loclists
@@ -566,11 +595,13 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_loclists
                 0x000002e0       0x86 build/hello/uart.o
  .debug_loclists
-                0x00000366       0xd7 build/hello/encoder.o
+                0x00000366      0x153 build/hello/esp.o
  .debug_loclists
-                0x0000043d      0x177 build/hello/system_msp432p401r.o
+                0x000004b9       0xd7 build/hello/encoder.o
+ .debug_loclists
+                0x00000590      0x177 build/hello/system_msp432p401r.o
 
-.debug_aranges  0x00000000      0x1c0
+.debug_aranges  0x00000000      0x210
  .debug_aranges
                 0x00000000       0x28 build/hello/hello.o
  .debug_aranges
@@ -580,16 +611,18 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_aranges
                 0x000000c0       0x48 build/hello/uart.o
  .debug_aranges
-                0x00000108       0x40 build/hello/encoder.o
+                0x00000108       0x50 build/hello/esp.o
  .debug_aranges
-                0x00000148       0x28 build/hello/stubs.o
+                0x00000158       0x40 build/hello/encoder.o
  .debug_aranges
-                0x00000170       0x28 build/hello/system_msp432p401r.o
+                0x00000198       0x28 build/hello/stubs.o
  .debug_aranges
-                0x00000198       0x28 build/hello/startup_msp432p401r_gcc.o
+                0x000001c0       0x28 build/hello/system_msp432p401r.o
+ .debug_aranges
+                0x000001e8       0x28 build/hello/startup_msp432p401r_gcc.o
 
 .debug_rnglists
-                0x00000000      0x183
+                0x00000000      0x1d7
  .debug_rnglists
                 0x00000000       0x25 build/hello/hello.o
  .debug_rnglists
@@ -599,40 +632,45 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_rnglists
                 0x000000c3       0x31 build/hello/uart.o
  .debug_rnglists
-                0x000000f4       0x43 build/hello/encoder.o
+                0x000000f4       0x54 build/hello/esp.o
  .debug_rnglists
-                0x00000137       0x19 build/hello/stubs.o
+                0x00000148       0x43 build/hello/encoder.o
  .debug_rnglists
-                0x00000150       0x1a build/hello/system_msp432p401r.o
+                0x0000018b       0x19 build/hello/stubs.o
  .debug_rnglists
-                0x0000016a       0x19 build/hello/startup_msp432p401r_gcc.o
+                0x000001a4       0x1a build/hello/system_msp432p401r.o
+ .debug_rnglists
+                0x000001be       0x19 build/hello/startup_msp432p401r_gcc.o
 
-.debug_line     0x00000000     0x14ab
+.debug_line     0x00000000     0x18ef
  .debug_line    0x00000000      0x239 build/hello/hello.o
  .debug_line    0x00000239      0x391 build/hello/board.o
  .debug_line    0x000005ca      0x404 build/hello/motor.o
  .debug_line    0x000009ce      0x2e3 build/hello/uart.o
- .debug_line    0x00000cb1      0x386 build/hello/encoder.o
- .debug_line    0x00001037       0x49 build/hello/stubs.o
- .debug_line    0x00001080      0x3b3 build/hello/system_msp432p401r.o
- .debug_line    0x00001433       0x78 build/hello/startup_msp432p401r_gcc.o
+ .debug_line    0x00000cb1      0x444 build/hello/esp.o
+ .debug_line    0x000010f5      0x386 build/hello/encoder.o
+ .debug_line    0x0000147b       0x49 build/hello/stubs.o
+ .debug_line    0x000014c4      0x3b3 build/hello/system_msp432p401r.o
+ .debug_line    0x00001877       0x78 build/hello/startup_msp432p401r_gcc.o
 
-.debug_str      0x00000000      0xfb8
- .debug_str     0x00000000      0xfb8 build/hello/hello.o
+.debug_str      0x00000000     0x1038
+ .debug_str     0x00000000     0x1038 build/hello/hello.o
                                 0x299 (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/board.o
+ .debug_str     0x00001038        0x0 build/hello/board.o
                                 0x300 (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/motor.o
+ .debug_str     0x00001038        0x0 build/hello/motor.o
                                 0x317 (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/uart.o
+ .debug_str     0x00001038        0x0 build/hello/uart.o
                                 0x2ae (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/encoder.o
+ .debug_str     0x00001038        0x0 build/hello/esp.o
+                                0x5ad (size before relaxing)
+ .debug_str     0x00001038        0x0 build/hello/encoder.o
                                 0x57f (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/stubs.o
+ .debug_str     0x00001038        0x0 build/hello/stubs.o
                                  0xc2 (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/system_msp432p401r.o
+ .debug_str     0x00001038        0x0 build/hello/system_msp432p401r.o
                                 0xa62 (size before relaxing)
- .debug_str     0x00000fb8        0x0 build/hello/startup_msp432p401r_gcc.o
+ .debug_str     0x00001038        0x0 build/hello/startup_msp432p401r_gcc.o
                                  0x72 (size before relaxing)
 
 .comment        0x00000000       0x46
@@ -644,6 +682,8 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
                                  0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/hello/uart.o
                                  0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/hello/esp.o
+                                 0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/hello/encoder.o
                                  0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/hello/stubs.o
@@ -651,15 +691,16 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .comment       0x00000046        0x0 build/hello/system_msp432p401r.o
                                  0x47 (size before relaxing)
 
-.debug_frame    0x00000000      0x31c
+.debug_frame    0x00000000      0x3e0
  .debug_frame   0x00000000       0x44 build/hello/hello.o
  .debug_frame   0x00000044       0x98 build/hello/board.o
  .debug_frame   0x000000dc       0x98 build/hello/motor.o
  .debug_frame   0x00000174       0x94 build/hello/uart.o
- .debug_frame   0x00000208       0x78 build/hello/encoder.o
- .debug_frame   0x00000280       0x30 build/hello/stubs.o
- .debug_frame   0x000002b0       0x40 build/hello/system_msp432p401r.o
- .debug_frame   0x000002f0       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_frame   0x00000208       0xc4 build/hello/esp.o
+ .debug_frame   0x000002cc       0x78 build/hello/encoder.o
+ .debug_frame   0x00000344       0x30 build/hello/stubs.o
+ .debug_frame   0x00000374       0x40 build/hello/system_msp432p401r.o
+ .debug_frame   0x000003b4       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
 
 .debug_line_str
                 0x00000000       0x56

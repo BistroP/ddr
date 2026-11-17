@@ -58,6 +58,25 @@ Discarded input sections
  .bss           0x00000000        0x0 build/encdrive/uart.o
  .text.uart_getc
                 0x00000000       0x18 build/encdrive/uart.o
+ .text          0x00000000        0x0 build/encdrive/esp.o
+ .data          0x00000000        0x0 build/encdrive/esp.o
+ .bss           0x00000000        0x0 build/encdrive/esp.o
+ .text.esp_init
+                0x00000000       0x4c build/encdrive/esp.o
+ .text.esp_putc
+                0x00000000       0x10 build/encdrive/esp.o
+ .text.esp_put_uint
+                0x00000000       0x32 build/encdrive/esp.o
+ .text.esp_puts
+                0x00000000       0x12 build/encdrive/esp.o
+ .text.esp_put_int
+                0x00000000       0x16 build/encdrive/esp.o
+ .text.esp_poll_line
+                0x00000000       0xc0 build/encdrive/esp.o
+ .bss.buf.0     0x00000000       0x40 build/encdrive/esp.o
+ .bss.overflow.1
+                0x00000000        0x4 build/encdrive/esp.o
+ .bss.len.2     0x00000000        0x4 build/encdrive/esp.o
  .text          0x00000000        0x0 build/encdrive/encoder.o
  .data          0x00000000        0x0 build/encdrive/encoder.o
  .bss           0x00000000        0x0 build/encdrive/encoder.o
@@ -259,6 +278,7 @@ LOAD build/encdrive/encdrive.o
 LOAD build/encdrive/board.o
 LOAD build/encdrive/motor.o
 LOAD build/encdrive/uart.o
+LOAD build/encdrive/esp.o
 LOAD build/encdrive/encoder.o
 LOAD build/encdrive/odom.o
 LOAD build/encdrive/stubs.o
@@ -290,7 +310,7 @@ END GROUP
                 0x00000000                g_pfnVectors
                 0x000000e4                        . = ALIGN (0x4)
 
-.text           0x000000e4      0x5f0
+.text           0x000000e4      0x628
                 0x000000e4                        . = ALIGN (0x4)
  *(.text)
  *(.text*)
@@ -341,147 +361,149 @@ END GROUP
                 0x00000474       0x16 build/encdrive/uart.o
                 0x00000474                uart_put_int
  *fill*         0x0000048a        0x2 
+ .text.EUSCIA1_IRQHandler
+                0x0000048c       0x38 build/encdrive/esp.o
+                0x0000048c                EUSCIA1_IRQHandler
  .text.arm_next_edge
-                0x0000048c       0x28 build/encdrive/encoder.o
+                0x000004c4       0x28 build/encdrive/encoder.o
  .text.encoder_init
-                0x000004b4       0x7c build/encdrive/encoder.o
-                0x000004b4                encoder_init
+                0x000004ec       0x7c build/encdrive/encoder.o
+                0x000004ec                encoder_init
  .text.PORT5_IRQHandler
-                0x00000530       0x74 build/encdrive/encoder.o
-                0x00000530                PORT5_IRQHandler
+                0x00000568       0x74 build/encdrive/encoder.o
+                0x00000568                PORT5_IRQHandler
  .text.encoder_left
-                0x000005a4        0xc build/encdrive/encoder.o
-                0x000005a4                encoder_left
+                0x000005dc        0xc build/encdrive/encoder.o
+                0x000005dc                encoder_left
  .text.encoder_right
-                0x000005b0        0xc build/encdrive/encoder.o
-                0x000005b0                encoder_right
- .text._init    0x000005bc        0x2 build/encdrive/stubs.o
-                0x000005bc                _init
- .text._fini    0x000005be        0x2 build/encdrive/stubs.o
-                0x000005be                _fini
+                0x000005e8        0xc build/encdrive/encoder.o
+                0x000005e8                encoder_right
+ .text._init    0x000005f4        0x2 build/encdrive/stubs.o
+                0x000005f4                _init
+ .text._fini    0x000005f6        0x2 build/encdrive/stubs.o
+                0x000005f6                _fini
  .text.SystemInit
-                0x000005c0       0x54 build/encdrive/system_msp432p401r.o
-                0x000005c0                SystemInit
+                0x000005f8       0x54 build/encdrive/system_msp432p401r.o
+                0x000005f8                SystemInit
  .text.Reset_Handler
-                0x00000614       0x50 build/encdrive/startup_msp432p401r_gcc.o
-                0x00000614                Reset_Handler
+                0x0000064c       0x50 build/encdrive/startup_msp432p401r_gcc.o
+                0x0000064c                Reset_Handler
  .text.Default_Handler
-                0x00000664        0x2 build/encdrive/startup_msp432p401r_gcc.o
-                0x00000664                T32_INT2_IRQHandler
-                0x00000664                DebugMon_Handler
-                0x00000664                AES256_IRQHandler
-                0x00000664                HardFault_Handler
-                0x00000664                SysTick_Handler
-                0x00000664                PendSV_Handler
-                0x00000664                NMI_Handler
-                0x00000664                RTC_C_IRQHandler
-                0x00000664                PORT1_IRQHandler
-                0x00000664                FPU_IRQHandler
-                0x00000664                PORT2_IRQHandler
-                0x00000664                TA3_0_IRQHandler
-                0x00000664                UsageFault_Handler
-                0x00000664                DMA_INT3_IRQHandler
-                0x00000664                TA2_0_IRQHandler
-                0x00000664                DMA_INT1_IRQHandler
-                0x00000664                WDT_A_IRQHandler
-                0x00000664                TA2_N_IRQHandler
-                0x00000664                TA1_0_IRQHandler
-                0x00000664                PSS_IRQHandler
-                0x00000664                DMA_INT2_IRQHandler
-                0x00000664                EUSCIA3_IRQHandler
-                0x00000664                DMA_INT0_IRQHandler
-                0x00000664                PORT4_IRQHandler
-                0x00000664                EUSCIB0_IRQHandler
-                0x00000664                Default_Handler
-                0x00000664                T32_INTC_IRQHandler
-                0x00000664                TA3_N_IRQHandler
-                0x00000664                TA0_0_IRQHandler
-                0x00000664                EUSCIA2_IRQHandler
-                0x00000664                PORT6_IRQHandler
-                0x00000664                PORT3_IRQHandler
-                0x00000664                MemManage_Handler
-                0x00000664                SVC_Handler
-                0x00000664                TA1_N_IRQHandler
-                0x00000664                EUSCIA1_IRQHandler
-                0x00000664                COMP_E1_IRQHandler
-                0x00000664                EUSCIB2_IRQHandler
-                0x00000664                FLCTL_IRQHandler
-                0x00000664                EUSCIB3_IRQHandler
-                0x00000664                T32_INT1_IRQHandler
-                0x00000664                DMA_ERR_IRQHandler
-                0x00000664                ADC14_IRQHandler
-                0x00000664                EUSCIA0_IRQHandler
-                0x00000664                BusFault_Handler
-                0x00000664                PCM_IRQHandler
-                0x00000664                TA0_N_IRQHandler
-                0x00000664                COMP_E0_IRQHandler
-                0x00000664                EUSCIB1_IRQHandler
-                0x00000664                CS_IRQHandler
- *fill*         0x00000666        0x2 
+                0x0000069c        0x2 build/encdrive/startup_msp432p401r_gcc.o
+                0x0000069c                T32_INT2_IRQHandler
+                0x0000069c                DebugMon_Handler
+                0x0000069c                AES256_IRQHandler
+                0x0000069c                HardFault_Handler
+                0x0000069c                SysTick_Handler
+                0x0000069c                PendSV_Handler
+                0x0000069c                NMI_Handler
+                0x0000069c                RTC_C_IRQHandler
+                0x0000069c                PORT1_IRQHandler
+                0x0000069c                FPU_IRQHandler
+                0x0000069c                PORT2_IRQHandler
+                0x0000069c                TA3_0_IRQHandler
+                0x0000069c                UsageFault_Handler
+                0x0000069c                DMA_INT3_IRQHandler
+                0x0000069c                TA2_0_IRQHandler
+                0x0000069c                DMA_INT1_IRQHandler
+                0x0000069c                WDT_A_IRQHandler
+                0x0000069c                TA2_N_IRQHandler
+                0x0000069c                TA1_0_IRQHandler
+                0x0000069c                PSS_IRQHandler
+                0x0000069c                DMA_INT2_IRQHandler
+                0x0000069c                EUSCIA3_IRQHandler
+                0x0000069c                DMA_INT0_IRQHandler
+                0x0000069c                PORT4_IRQHandler
+                0x0000069c                EUSCIB0_IRQHandler
+                0x0000069c                Default_Handler
+                0x0000069c                T32_INTC_IRQHandler
+                0x0000069c                TA3_N_IRQHandler
+                0x0000069c                TA0_0_IRQHandler
+                0x0000069c                EUSCIA2_IRQHandler
+                0x0000069c                PORT6_IRQHandler
+                0x0000069c                PORT3_IRQHandler
+                0x0000069c                MemManage_Handler
+                0x0000069c                SVC_Handler
+                0x0000069c                TA1_N_IRQHandler
+                0x0000069c                COMP_E1_IRQHandler
+                0x0000069c                EUSCIB2_IRQHandler
+                0x0000069c                FLCTL_IRQHandler
+                0x0000069c                EUSCIB3_IRQHandler
+                0x0000069c                T32_INT1_IRQHandler
+                0x0000069c                DMA_ERR_IRQHandler
+                0x0000069c                ADC14_IRQHandler
+                0x0000069c                EUSCIA0_IRQHandler
+                0x0000069c                BusFault_Handler
+                0x0000069c                PCM_IRQHandler
+                0x0000069c                TA0_N_IRQHandler
+                0x0000069c                COMP_E0_IRQHandler
+                0x0000069c                EUSCIB1_IRQHandler
+                0x0000069c                CS_IRQHandler
+ *fill*         0x0000069e        0x2 
  .text.__libc_init_array
-                0x00000668       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
-                0x00000668                __libc_init_array
+                0x000006a0       0x48 /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                0x000006a0                __libc_init_array
  *(.rodata)
  *(.rodata*)
  .rodata.tick.str1.1
-                0x000006b0       0x21 build/encdrive/encdrive.o
+                0x000006e8       0x21 build/encdrive/encdrive.o
                                   0x8 (size before relaxing)
  .rodata.main.str1.1
-                0x000006d1        0x0 build/encdrive/encdrive.o
+                0x00000709        0x0 build/encdrive/encdrive.o
                                  0x14 (size before relaxing)
  .rodata.str1.1
-                0x000006d1        0x0 build/encdrive/encdrive.o
+                0x00000709        0x0 build/encdrive/encdrive.o
                                   0x5 (size before relaxing)
  *(.glue_7)
- .glue_7        0x000006d1        0x0 linker stubs
+ .glue_7        0x00000709        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x000006d1        0x0 linker stubs
+ .glue_7t       0x00000709        0x0 linker stubs
  *(.eh_frame)
  *(.init)
  *(.fini)
-                0x000006d4                        . = ALIGN (0x4)
- *fill*         0x000006d1        0x3 
-                0x000006d4                        _etext = .
+                0x0000070c                        . = ALIGN (0x4)
+ *fill*         0x00000709        0x3 
+                0x0000070c                        _etext = .
 
-.vfp11_veneer   0x000006d4        0x0
- .vfp11_veneer  0x000006d4        0x0 linker stubs
+.vfp11_veneer   0x0000070c        0x0
+ .vfp11_veneer  0x0000070c        0x0 linker stubs
 
-.v4_bx          0x000006d4        0x0
- .v4_bx         0x000006d4        0x0 linker stubs
+.v4_bx          0x0000070c        0x0
+ .v4_bx         0x0000070c        0x0 linker stubs
 
-.iplt           0x000006d4        0x0
- .iplt          0x000006d4        0x0 build/encdrive/encdrive.o
+.iplt           0x0000070c        0x0
+ .iplt          0x0000070c        0x0 build/encdrive/encdrive.o
 
-.rel.dyn        0x000006d4        0x0
- .rel.iplt      0x000006d4        0x0 build/encdrive/encdrive.o
+.rel.dyn        0x0000070c        0x0
+ .rel.iplt      0x0000070c        0x0 build/encdrive/encdrive.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x000006d4        0x0
-                0x000006d4                        __exidx_start = .
+.ARM            0x0000070c        0x0
+                0x0000070c                        __exidx_start = .
  *(.ARM.exidx*)
-                0x000006d4                        __exidx_end = .
+                0x0000070c                        __exidx_end = .
 
-.preinit_array  0x000006d4        0x0
-                0x000006d4                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x0000070c        0x0
+                0x0000070c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x000006d4                        PROVIDE (__preinit_array_end = .)
+                0x0000070c                        PROVIDE (__preinit_array_end = .)
 
-.init_array     0x000006d4        0x0
-                0x000006d4                        PROVIDE (__init_array_start = .)
+.init_array     0x0000070c        0x0
+                0x0000070c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
-                0x000006d4                        PROVIDE (__init_array_end = .)
+                0x0000070c                        PROVIDE (__init_array_end = .)
 
-.fini_array     0x000006d4        0x0
+.fini_array     0x0000070c        0x0
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x000006d4                        _sidata = LOADADDR (.data)
+                0x0000070c                        _sidata = LOADADDR (.data)
 
-.data           0x20000000        0x4 load address 0x000006d4
+.data           0x20000000        0x4 load address 0x0000070c
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -490,34 +512,37 @@ END GROUP
                 0x20000004                        . = ALIGN (0x4)
                 0x20000004                        _edata = .
 
-.igot.plt       0x20000004        0x0 load address 0x000006d8
+.igot.plt       0x20000004        0x0 load address 0x00000710
  .igot.plt      0x20000004        0x0 build/encdrive/encdrive.o
                 0x20000004                        . = ALIGN (0x4)
 
-.bss            0x20000004        0xc
+.bss            0x20000004       0x94
                 0x20000004                        _sbss = .
                 0x20000004                        __bss_start__ = _sbss
  *(.bss)
  *(.bss*)
  .bss.ms        0x20000004        0x4 build/encdrive/encdrive.o
+ .bss.rx_tail   0x20000008        0x4 build/encdrive/esp.o
+ .bss.rx_head   0x2000000c        0x4 build/encdrive/esp.o
+ .bss.rx_buf    0x20000010       0x80 build/encdrive/esp.o
  .bss.right_count
-                0x20000008        0x4 build/encdrive/encoder.o
+                0x20000090        0x4 build/encdrive/encoder.o
  .bss.left_count
-                0x2000000c        0x4 build/encdrive/encoder.o
+                0x20000094        0x4 build/encdrive/encoder.o
  *(COMMON)
-                0x20000010                        . = ALIGN (0x4)
-                0x20000010                        _ebss = .
-                0x20000010                        __bss_end__ = _ebss
+                0x20000098                        . = ALIGN (0x4)
+                0x20000098                        _ebss = .
+                0x20000098                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20000010       0x80
-                0x20000010                        . = ALIGN (0x4)
+                0x20000098       0x80
+                0x20000098                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x20000010                        . = (. + _Min_Heap_Size)
-                0x20000090                        . = (. + _Min_Stack_Size)
- *fill*         0x20000010       0x80 
-                0x20000090                        . = ALIGN (0x4)
+                0x20000098                        . = (. + _Min_Heap_Size)
+                0x20000118                        . = (. + _Min_Stack_Size)
+ *fill*         0x20000098       0x80 
+                0x20000118                        . = ALIGN (0x4)
 
 /DISCARD/
  libc.a(*)
@@ -536,42 +561,46 @@ END GROUP
  .ARM.attributes
                 0x0000008a       0x2e build/encdrive/uart.o
  .ARM.attributes
-                0x000000b8       0x2e build/encdrive/encoder.o
+                0x000000b8       0x2e build/encdrive/esp.o
  .ARM.attributes
-                0x000000e6       0x2e build/encdrive/stubs.o
+                0x000000e6       0x2e build/encdrive/encoder.o
  .ARM.attributes
-                0x00000114       0x2e build/encdrive/system_msp432p401r.o
+                0x00000114       0x2e build/encdrive/stubs.o
  .ARM.attributes
-                0x00000142       0x21 build/encdrive/startup_msp432p401r_gcc.o
+                0x00000142       0x2e build/encdrive/system_msp432p401r.o
  .ARM.attributes
-                0x00000163       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+                0x00000170       0x21 build/encdrive/startup_msp432p401r_gcc.o
+ .ARM.attributes
+                0x00000191       0x2e /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
 OUTPUT(build/encdrive/encdrive.elf elf32-littlearm)
 LOAD linker stubs
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc.a
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libm.a
 LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/thumb/v7e-m/nofp/libgcc.a
 
-.debug_info     0x00000000     0x2a65
+.debug_info     0x00000000     0x32cf
  .debug_info    0x00000000      0x357 build/encdrive/encdrive.o
  .debug_info    0x00000357      0x721 build/encdrive/board.o
  .debug_info    0x00000a78      0x7b0 build/encdrive/motor.o
  .debug_info    0x00001228      0x437 build/encdrive/uart.o
- .debug_info    0x0000165f      0x827 build/encdrive/encoder.o
- .debug_info    0x00001e86       0x4c build/encdrive/stubs.o
- .debug_info    0x00001ed2      0xb63 build/encdrive/system_msp432p401r.o
- .debug_info    0x00002a35       0x30 build/encdrive/startup_msp432p401r_gcc.o
+ .debug_info    0x0000165f      0x86a build/encdrive/esp.o
+ .debug_info    0x00001ec9      0x827 build/encdrive/encoder.o
+ .debug_info    0x000026f0       0x4c build/encdrive/stubs.o
+ .debug_info    0x0000273c      0xb63 build/encdrive/system_msp432p401r.o
+ .debug_info    0x0000329f       0x30 build/encdrive/startup_msp432p401r_gcc.o
 
-.debug_abbrev   0x00000000      0xb67
+.debug_abbrev   0x00000000      0xdd6
  .debug_abbrev  0x00000000      0x15f build/encdrive/encdrive.o
  .debug_abbrev  0x0000015f      0x1f6 build/encdrive/board.o
  .debug_abbrev  0x00000355      0x263 build/encdrive/motor.o
  .debug_abbrev  0x000005b8      0x190 build/encdrive/uart.o
- .debug_abbrev  0x00000748      0x262 build/encdrive/encoder.o
- .debug_abbrev  0x000009aa       0x4d build/encdrive/stubs.o
- .debug_abbrev  0x000009f7      0x14c build/encdrive/system_msp432p401r.o
- .debug_abbrev  0x00000b43       0x24 build/encdrive/startup_msp432p401r_gcc.o
+ .debug_abbrev  0x00000748      0x26f build/encdrive/esp.o
+ .debug_abbrev  0x000009b7      0x262 build/encdrive/encoder.o
+ .debug_abbrev  0x00000c19       0x4d build/encdrive/stubs.o
+ .debug_abbrev  0x00000c66      0x14c build/encdrive/system_msp432p401r.o
+ .debug_abbrev  0x00000db2       0x24 build/encdrive/startup_msp432p401r_gcc.o
 
-.debug_aranges  0x00000000      0x1c0
+.debug_aranges  0x00000000      0x210
  .debug_aranges
                 0x00000000       0x28 build/encdrive/encdrive.o
  .debug_aranges
@@ -581,16 +610,18 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_aranges
                 0x000000c0       0x48 build/encdrive/uart.o
  .debug_aranges
-                0x00000108       0x40 build/encdrive/encoder.o
+                0x00000108       0x50 build/encdrive/esp.o
  .debug_aranges
-                0x00000148       0x28 build/encdrive/stubs.o
+                0x00000158       0x40 build/encdrive/encoder.o
  .debug_aranges
-                0x00000170       0x28 build/encdrive/system_msp432p401r.o
+                0x00000198       0x28 build/encdrive/stubs.o
  .debug_aranges
-                0x00000198       0x28 build/encdrive/startup_msp432p401r_gcc.o
+                0x000001c0       0x28 build/encdrive/system_msp432p401r.o
+ .debug_aranges
+                0x000001e8       0x28 build/encdrive/startup_msp432p401r_gcc.o
 
 .debug_rnglists
-                0x00000000      0x178
+                0x00000000      0x1cc
  .debug_rnglists
                 0x00000000       0x1a build/encdrive/encdrive.o
  .debug_rnglists
@@ -600,40 +631,45 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_rnglists
                 0x000000b8       0x31 build/encdrive/uart.o
  .debug_rnglists
-                0x000000e9       0x43 build/encdrive/encoder.o
+                0x000000e9       0x54 build/encdrive/esp.o
  .debug_rnglists
-                0x0000012c       0x19 build/encdrive/stubs.o
+                0x0000013d       0x43 build/encdrive/encoder.o
  .debug_rnglists
-                0x00000145       0x1a build/encdrive/system_msp432p401r.o
+                0x00000180       0x19 build/encdrive/stubs.o
  .debug_rnglists
-                0x0000015f       0x19 build/encdrive/startup_msp432p401r_gcc.o
+                0x00000199       0x1a build/encdrive/system_msp432p401r.o
+ .debug_rnglists
+                0x000001b3       0x19 build/encdrive/startup_msp432p401r_gcc.o
 
-.debug_line     0x00000000     0x14b9
+.debug_line     0x00000000     0x18fd
  .debug_line    0x00000000      0x247 build/encdrive/encdrive.o
  .debug_line    0x00000247      0x391 build/encdrive/board.o
  .debug_line    0x000005d8      0x404 build/encdrive/motor.o
  .debug_line    0x000009dc      0x2e3 build/encdrive/uart.o
- .debug_line    0x00000cbf      0x386 build/encdrive/encoder.o
- .debug_line    0x00001045       0x49 build/encdrive/stubs.o
- .debug_line    0x0000108e      0x3b3 build/encdrive/system_msp432p401r.o
- .debug_line    0x00001441       0x78 build/encdrive/startup_msp432p401r_gcc.o
+ .debug_line    0x00000cbf      0x444 build/encdrive/esp.o
+ .debug_line    0x00001103      0x386 build/encdrive/encoder.o
+ .debug_line    0x00001489       0x49 build/encdrive/stubs.o
+ .debug_line    0x000014d2      0x3b3 build/encdrive/system_msp432p401r.o
+ .debug_line    0x00001885       0x78 build/encdrive/startup_msp432p401r_gcc.o
 
-.debug_str      0x00000000      0xfb6
- .debug_str     0x00000000      0xfb6 build/encdrive/encdrive.o
+.debug_str      0x00000000     0x1036
+ .debug_str     0x00000000     0x1036 build/encdrive/encdrive.o
                                 0x219 (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/board.o
+ .debug_str     0x00001036        0x0 build/encdrive/board.o
                                 0x300 (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/motor.o
+ .debug_str     0x00001036        0x0 build/encdrive/motor.o
                                 0x317 (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/uart.o
+ .debug_str     0x00001036        0x0 build/encdrive/uart.o
                                 0x2ae (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/encoder.o
+ .debug_str     0x00001036        0x0 build/encdrive/esp.o
+                                0x5ad (size before relaxing)
+ .debug_str     0x00001036        0x0 build/encdrive/encoder.o
                                 0x57f (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/stubs.o
+ .debug_str     0x00001036        0x0 build/encdrive/stubs.o
                                  0xc2 (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/system_msp432p401r.o
+ .debug_str     0x00001036        0x0 build/encdrive/system_msp432p401r.o
                                 0xa62 (size before relaxing)
- .debug_str     0x00000fb6        0x0 build/encdrive/startup_msp432p401r_gcc.o
+ .debug_str     0x00001036        0x0 build/encdrive/startup_msp432p401r_gcc.o
                                  0x72 (size before relaxing)
 
 .comment        0x00000000       0x46
@@ -645,6 +681,8 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
                                  0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/encdrive/uart.o
                                  0x47 (size before relaxing)
+ .comment       0x00000046        0x0 build/encdrive/esp.o
+                                 0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/encdrive/encoder.o
                                  0x47 (size before relaxing)
  .comment       0x00000046        0x0 build/encdrive/stubs.o
@@ -652,18 +690,19 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .comment       0x00000046        0x0 build/encdrive/system_msp432p401r.o
                                  0x47 (size before relaxing)
 
-.debug_frame    0x00000000      0x318
+.debug_frame    0x00000000      0x3dc
  .debug_frame   0x00000000       0x40 build/encdrive/encdrive.o
  .debug_frame   0x00000040       0x98 build/encdrive/board.o
  .debug_frame   0x000000d8       0x98 build/encdrive/motor.o
  .debug_frame   0x00000170       0x94 build/encdrive/uart.o
- .debug_frame   0x00000204       0x78 build/encdrive/encoder.o
- .debug_frame   0x0000027c       0x30 build/encdrive/stubs.o
- .debug_frame   0x000002ac       0x40 build/encdrive/system_msp432p401r.o
- .debug_frame   0x000002ec       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
+ .debug_frame   0x00000204       0xc4 build/encdrive/esp.o
+ .debug_frame   0x000002c8       0x78 build/encdrive/encoder.o
+ .debug_frame   0x00000340       0x30 build/encdrive/stubs.o
+ .debug_frame   0x00000370       0x40 build/encdrive/system_msp432p401r.o
+ .debug_frame   0x000003b0       0x2c /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchain-15.3.rel2-darwin-arm64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/nofp/libc_nano.a(libc_a-init.o)
 
 .debug_loclists
-                0x00000000      0x588
+                0x00000000      0x6db
  .debug_loclists
                 0x00000000       0xa6 build/encdrive/board.o
  .debug_loclists
@@ -671,9 +710,11 @@ LOAD /Users/childrebelsoldier/tools/arm-gnu-toolchain-15.3.rel2/arm-gnu-toolchai
  .debug_loclists
                 0x000002b4       0x86 build/encdrive/uart.o
  .debug_loclists
-                0x0000033a       0xd7 build/encdrive/encoder.o
+                0x0000033a      0x153 build/encdrive/esp.o
  .debug_loclists
-                0x00000411      0x177 build/encdrive/system_msp432p401r.o
+                0x0000048d       0xd7 build/encdrive/encoder.o
+ .debug_loclists
+                0x00000564      0x177 build/encdrive/system_msp432p401r.o
 
 .debug_line_str
                 0x00000000       0x56

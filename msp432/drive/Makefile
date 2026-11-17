@@ -23,7 +23,7 @@ LDFLAGS = $(CPU) -T$(VENDOR)/msp432p401r.ld -nostartfiles \
           --specs=nano.specs --specs=nosys.specs \
           -Wl,--gc-sections -Wl,-Map=$(BUILD)/$(APP).map -lm
 
-SRCS_C  = $(APP).c board.c motor.c uart.c encoder.c odom.c stubs.c system_msp432p401r.c
+SRCS_C  = $(APP).c board.c motor.c uart.c esp.c encoder.c odom.c stubs.c system_msp432p401r.c
 SRCS_S  = startup_msp432p401r_gcc.S
 OBJS    = $(addprefix $(BUILD)/,$(SRCS_C:.c=.o) $(SRCS_S:.S=.o))
 

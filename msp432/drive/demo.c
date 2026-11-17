@@ -9,6 +9,10 @@
 // Distances and angles come from the wheel encoders (see odom.c), so what the Buckler shows
 // is what the robot BELIEVES. Wheel slip makes it drift from the true position.
 //
+// Radio: the same position line also goes to an ESP32 (see esp.h) that broadcasts it to the
+// other robot, and the other robot's position comes back from the ESP32 as "OTHER ..." lines,
+// which are passed on to the Buckler.
+//
 // Run this on the floor, in a clear area, only after checking the encoders with enctest.
 // Safety:
 //   * A chassis bump switch stops everything.
@@ -29,15 +33,19 @@
 #include "motor.h"
 #include "odom.h"
 #include "encoder.h"
+#include "esp.h"
 #include "uart.h"
 
 #define UNIT_MM 300          // one cell
 #define SIDES 4              // 4 sides make a square (1 would be just one cell and a turn)
 #define DRIVE_SPEED 20       // percent duty while driving straight (30 is fast; lower = slower)
-#define TURN_SPEED 22        // percent duty while turning in place (lower = slower)
+#define TURN_SPEED 20        // percent duty while turning in place (lower = slower)
+#define TURN_SLOW_ZONE_DEG 24 // within this many degrees of the target, slow down to...
+#define TURN_SLOW_SPEED 17   // ...this duty, so there is little momentum left to coast
 #define TURN_DEG 90
-#define TURN_MARGIN_DEG 0    // stop this many degrees BEFORE the target heading (0 = stop on
-                             // reaching it; raise it if the robot overshoots while coasting)
+#define TURN_MARGIN_DEG 1    // stop this many degrees BEFORE the target heading (the robot
+                             // still coasts a little; raise it if it overshoots, lower it
+                             // if it lands short)
 #define LEG_TIMEOUT_MS 15000 // only a safety net: a leg normally ends on reaching UNIT_MM
 #define TURN_TIMEOUT_MS 10000 // only a safety net: a turn normally ends on reaching its heading
 #define SETTLE_MS 1500       // stand still between moves (long enough to read the display)
@@ -55,8 +63,8 @@
 // small power difference between the wheels: drifted clockwise (positive heading error) ->
 // less power to the left wheel, more to the right; drifted anticlockwise -> the opposite.
 // Only the straight legs steer; turns and stops are unchanged.
-#define STEER_GAIN 1.5f      // percent power difference per degree of heading error
-#define STEER_MAX_PCT 5      // never change either wheel by more than this
+#define STEER_GAIN 2.5f      // percent power difference per degree of heading error
+#define STEER_MAX_PCT 6      // never change either wheel by more than this
 
 #define ODOM_PERIOD_MS 20
 #define POS_PERIOD_MS 100
@@ -70,7 +78,8 @@ static unsigned step_ms;     // milliseconds since the current step began
 static const char *fail_reason;
 static int fail_left, fail_right, fail_heading;
 
-static int leg_start_x, leg_start_y, leg_start_deg;
+static int leg_start_x, leg_start_y;
+static int leg_heading_deg;         // absolute heading this leg aims for and steers toward
 static float leg_dir_x, leg_dir_y;  // unit vector of the leg's direction (x right, y up)
 static int turn_start_deg;
 static int turn_target_deg;         // absolute heading this turn aims for
@@ -80,14 +89,47 @@ static unsigned leg_end_ms;                       // time the leg ran, in ms
 static int leg_end_left, leg_end_right;           // encoder counts when it stopped
 static int leg_end_progress;                      // distance covered, in mm
 
+// Send our position as "POS x y heading" to the Buckler (display) and to the ESP32 (radio,
+// which broadcasts it to the other robot).
 static void send_pos(void) {
+  int x = odom_x_mm();
+  int y = odom_y_mm();
+  int h = odom_heading_deg();
+
   uart_puts("POS ");
-  uart_put_int(odom_x_mm());
+  uart_put_int(x);
   uart_putc(' ');
-  uart_put_int(odom_y_mm());
+  uart_put_int(y);
   uart_putc(' ');
-  uart_put_int(odom_heading_deg());
+  uart_put_int(h);
   uart_putc('\n');
+
+  esp_puts("POS ");
+  esp_put_int(x);
+  esp_putc(' ');
+  esp_put_int(y);
+  esp_putc(' ');
+  esp_put_int(h);
+  esp_putc('\n');
+}
+
+static int starts_with(const char *s, const char *prefix) {
+  while (*prefix) {
+    if (*s++ != *prefix++) {
+      return 0;
+    }
+  }
+  return 1;
+}
+
+// The ESP32 sends us the other robot's position as "OTHER id x y heading". Pass those lines
+// on to the Buckler, which shows them. Anything else the ESP32 says is ignored.
+static void relay_from_esp(void) {
+  char line[64];
+  if (esp_poll_line(line, sizeof line) > 0 && starts_with(line, "OTHER ")) {
+    uart_puts(line);
+    uart_putc('\n');
+  }
 }
 
 // Runs once per millisecond while the robot is busy: keeps the position estimate fresh and
@@ -100,6 +142,7 @@ static int service(void) {
   if (ms_ticks % POS_PERIOD_MS == 0) {
     send_pos();
   }
+  relay_from_esp();
   return 0;
 }
 
@@ -173,7 +216,7 @@ static int leg_done(void) {
   if (progress >= (float)UNIT_MM) {
     return 1;
   }
-  int drift = wrap180(odom_heading_deg() - leg_start_deg);
+  int drift = wrap180(odom_heading_deg() - leg_heading_deg);
   if (step_ms >= CHECK_MS && progress < (float)MIN_FORWARD_MM) {
     note_failure("stall");
     return 1;
@@ -183,7 +226,7 @@ static int leg_done(void) {
     return 1;
   }
 
-  // Steer back toward the heading the leg started with.
+  // Steer toward the leg's heading (so a turn that ended a few degrees off is corrected).
   int correction = (int)lroundf(STEER_GAIN * (float)drift);
   if (correction > STEER_MAX_PCT) {
     correction = STEER_MAX_PCT;
@@ -203,7 +246,8 @@ static int turn_done(void) {
   }
   int turned = wrap180(odom_heading_deg() - turn_start_deg);
   // Degrees still to go (zero or negative once the target is reached or passed).
-  if (wrap180(turn_target_deg - odom_heading_deg()) <= TURN_MARGIN_DEG) {
+  int remaining = wrap180(turn_target_deg - odom_heading_deg());
+  if (remaining <= TURN_MARGIN_DEG) {
     return 1;
   }
   if (step_ms >= CHECK_MS && turned < MIN_TURN_DEG) {
@@ -214,15 +258,20 @@ static int turn_done(void) {
     note_failure("wrong");
     return 1;
   }
+  if (remaining <= TURN_SLOW_ZONE_DEG) {
+    motor_set(TURN_SLOW_SPEED, -TURN_SLOW_SPEED);  // creep up on the target
+  }
   return 0;
 }
 
-static void drive_one_cell(void) {
+// Drive one cell, steering to hold heading_deg (an absolute heading: 0 = the way the robot
+// started, 90 = a right angle clockwise from that, and so on).
+static void drive_one_cell(int heading_deg) {
   leg_start_x = odom_x_mm();
   leg_start_y = odom_y_mm();
-  leg_start_deg = odom_heading_deg();
-  leg_dir_x = sinf((float)leg_start_deg * DEG_TO_RAD);
-  leg_dir_y = cosf((float)leg_start_deg * DEG_TO_RAD);
+  leg_heading_deg = wrap180(heading_deg);
+  leg_dir_x = sinf((float)leg_heading_deg * DEG_TO_RAD);
+  leg_dir_y = cosf((float)leg_heading_deg * DEG_TO_RAD);
   step_ms = 0;
   motor_run_until(DRIVE_SPEED, DRIVE_SPEED, LEG_TIMEOUT_MS, leg_done);
   leg_end_ms = step_ms;
@@ -252,6 +301,7 @@ int main(void) {
   board_init();
   motor_init();
   uart_init();
+  esp_init();
   encoder_init();
   odom_reset();
 
@@ -259,8 +309,8 @@ int main(void) {
   motor_run_until(0, 0, COUNTDOWN_MS, countdown_service);
 
   for (int side = 0; side < SIDES; side++) {
-    drive_one_cell();
-    turn_right(TURN_DEG * (side + 1));  // 90, 180, 270, 360 degrees
+    drive_one_cell(TURN_DEG * side);    // headings 0, 90, 180, 270
+    turn_right(TURN_DEG * (side + 1));  // turns to 90, 180, 270, 360
   }
   motor_off();
 

@@ -3,8 +3,11 @@
 // The robot (MSP432) sends its estimated position as text lines over the UART, e.g.
 //     POS 300 0 90      (x in mm, y in mm, heading in degrees clockwise from "up")
 // This app shows it on the display:
-//     row 0:  x300 y0 mm
-//     row 1:  h90 cell 1,0         (cell = position divided by CELL_MM, rounded)
+//     row 0:  me x300 y0           (our position in mm)
+//     row 1:  R2 x600 y0           (the OTHER robot's position, once its radio line arrives)
+//             or, when we are not hearing the other robot:
+//             h90 cell 1,0         (cell = position divided by CELL_MM, rounded)
+// The other robot's position arrives as a line like  OTHER 2 600 0 90  (id, x, y, heading).
 // Any other line the robot sends (for example "HELLO 5 rx0" or "ENC 120 -3") is shown as it
 // is on row 0, which is handy for testing. If such a line contains a "|", the text before it
 // goes on row 0 and the text after it on row 1, e.g. the robot's failure report
@@ -60,14 +63,48 @@ static int to_cell(int mm) {
   return (mm >= 0 ? mm + CELL_MM / 2 : mm - CELL_MM / 2) / CELL_MM;
 }
 
+// Our own latest position, and the latest position of the other robot (it arrives over the
+// radio as "OTHER id x y heading"). Positions are in mm.
+static int own_x, own_y, own_h;
+static int other_id, other_x, other_y;
+// How many of our own POS lines have arrived since the last OTHER line. The robot sends about
+// 10 POS lines a second, so more than OTHER_FRESH_POS_LINES means we have not heard from the
+// other robot for about 1.5 s and its position is out of date.
+#define OTHER_FRESH_POS_LINES 15
+#define NEVER_HEARD 1000
+static int other_age = NEVER_HEARD;
+
+// Row 0: our position.  Row 1: the other robot's position while we are hearing it, otherwise
+// our heading and cell.
+static void redraw(void) {
+  char top[17], bottom[17];
+  snprintf(top, sizeof top, "me x%d y%d", own_x, own_y);
+  if (other_age <= OTHER_FRESH_POS_LINES) {
+    snprintf(bottom, sizeof bottom, "R%d x%d y%d", other_id, other_x, other_y);
+  } else {
+    snprintf(bottom, sizeof bottom, "h%d cell %d,%d", own_h, to_cell(own_x), to_cell(own_y));
+  }
+  display_write(top, DISPLAY_LINE_0);
+  display_write(bottom, DISPLAY_LINE_1);
+}
+
 static void show_line(const char *line) {
-  int x, y, h;
+  int x, y, h, id;
   char top[17], bottom[17];
   if (sscanf(line, "POS %d %d %d", &x, &y, &h) == 3) {
-    snprintf(top, sizeof top, "x%d y%d mm", x, y);
-    snprintf(bottom, sizeof bottom, "h%d cell %d,%d", h, to_cell(x), to_cell(y));
-    display_write(top, DISPLAY_LINE_0);
-    display_write(bottom, DISPLAY_LINE_1);
+    own_x = x;
+    own_y = y;
+    own_h = h;
+    if (other_age < NEVER_HEARD) {
+      other_age++;
+    }
+    redraw();
+  } else if (sscanf(line, "OTHER %d %d %d %d", &id, &x, &y, &h) == 4) {
+    other_id = id;
+    other_x = x;
+    other_y = y;
+    other_age = 0;
+    redraw();
   } else {
     const char *bar = strchr(line, '|');
     if (bar != NULL) {
