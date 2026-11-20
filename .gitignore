@@ -1,0 +1,11 @@
+# Build output: rebuild with make
+build/
+_build/
+
+# Flash dumps and merged images are specific to one chip and one app version.
+# Regenerate them instead of sharing them (see docs/SETUP.md, "Restoring the SoftDevice").
+buckler-blink/*.bin
+buckler-blink/*_merged.hex
+
+# macOS
+.DS_Store

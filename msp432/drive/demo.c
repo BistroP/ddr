@@ -9,9 +9,9 @@
 // Distances and angles come from the wheel encoders (see odom.c), so what the Buckler shows
 // is what the robot BELIEVES. Wheel slip makes it drift from the true position.
 //
-// Radio: the same position line also goes to an ESP32 (see esp.h) that broadcasts it to the
-// other robot, and the other robot's position comes back from the ESP32 as "OTHER ..." lines,
-// which are passed on to the Buckler.
+// Radio: robot-to-robot messages go over Bluetooth from the Buckler, which just needs the POS
+// lines this program already sends it. (With USE_ESP set to 1 the same line also goes to an
+// ESP32 radio board, whose "OTHER ..." replies are passed on to the Buckler.)
 //
 // Run this on the floor, in a clear area, only after checking the encoders with enctest.
 // Safety:
@@ -37,6 +37,10 @@
 #include "uart.h"
 
 #define UNIT_MM 300          // one cell
+// 1 = an ESP32 radio board is wired to P2.2/P2.3 (see esp.h). 0 = no ESP32: robot-to-robot
+// messages go over Bluetooth from the Buckler instead. Keep 0 when nothing is connected to
+// those pins: an unconnected receive pin picks up noise.
+#define USE_ESP 0
 #define SIDES 4              // 4 sides make a square (1 would be just one cell and a turn)
 #define DRIVE_SPEED 20       // percent duty while driving straight (30 is fast; lower = slower)
 #define TURN_SPEED 20        // percent duty while turning in place (lower = slower)
@@ -104,6 +108,7 @@ static void send_pos(void) {
   uart_put_int(h);
   uart_putc('\n');
 
+#if USE_ESP
   esp_puts("POS ");
   esp_put_int(x);
   esp_putc(' ');
@@ -111,8 +116,10 @@ static void send_pos(void) {
   esp_putc(' ');
   esp_put_int(h);
   esp_putc('\n');
+#endif
 }
 
+#if USE_ESP
 static int starts_with(const char *s, const char *prefix) {
   while (*prefix) {
     if (*s++ != *prefix++) {
@@ -131,6 +138,7 @@ static void relay_from_esp(void) {
     uart_putc('\n');
   }
 }
+#endif
 
 // Runs once per millisecond while the robot is busy: keeps the position estimate fresh and
 // reports it. Returns 0 so it can be passed as a "never stop early" callback.
@@ -142,7 +150,9 @@ static int service(void) {
   if (ms_ticks % POS_PERIOD_MS == 0) {
     send_pos();
   }
+#if USE_ESP
   relay_from_esp();
+#endif
   return 0;
 }
 
@@ -301,7 +311,9 @@ int main(void) {
   board_init();
   motor_init();
   uart_init();
+#if USE_ESP
   esp_init();
+#endif
   encoder_init();
   odom_reset();
 

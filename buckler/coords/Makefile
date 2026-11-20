@@ -10,6 +10,7 @@ SOFTDEVICE_MODEL = s132
 
 # Source and header files
 APP_HEADER_PATHS += .
+APP_HEADER_PATHS += ../common
 APP_SOURCE_PATHS += .
 APP_SOURCES = $(notdir $(wildcard ./*.c))
 
